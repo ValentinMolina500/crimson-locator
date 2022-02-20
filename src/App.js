@@ -12,6 +12,7 @@ import VENDING from "./vending.jpg";
 import EEME1 from "./EEME1grey.png";
 import EEME2 from "./EEME2grey.png";
 import Marker from "./Marker"
+import mark128 from "./markers/floor1rooms/128.png";
 function Galactus(lat, lng) {
   const left = -74500 * (lat - 46.73176)
   const top = 1075000 * (lng + 117.16967);
@@ -27,7 +28,8 @@ const EEME1_MAP_LOCS = [
     id: 1,
     lat: 46.7305450,
     lng: -117.1695850,
-    title: "Room 128/120",
+    title: "Room 128",
+    icon: "http://maps.google.com/mapfiles/kml/shapes/polygon.png",
     sub: "CS Lab",
     floor: "1",
     image: ROOM_128,
@@ -40,7 +42,7 @@ const EEME1_MAP_LOCS = [
     title: "Male Bathroom",
     floor: "1",
     image: BATHROOM,
-    type: "other",
+    type: "amenities",
     avgScore: 4,
     reviews: [
       {
@@ -49,14 +51,15 @@ const EEME1_MAP_LOCS = [
         body: "The bathroom  was kept clean."
       }
     ]
-  },{
+  },
+  {
     id: 3,
     lat: 46.7304500,
     lng: -117.169725,
     title: "Vending Machine",
     floor: "1",
     image: VENDING,
-    type: "other",
+    type: "amenities",
     avgScore: 4,
     reviews: [
       {
