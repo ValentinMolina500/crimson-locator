@@ -5,7 +5,9 @@ const Marker = (options) => {
 
   React.useEffect(() => {
     if (!marker) {
-      const marker = new window.google.maps.Marker();
+      const marker = new window.google.maps.Marker({
+        icon: options.icon
+      });
       marker.addListener("click", (map) => {
         console.log("CLICK")
         options?.onMarkerClick();

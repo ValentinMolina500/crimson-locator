@@ -29,7 +29,7 @@ const EEME1_MAP_LOCS = [
     lat: 46.7305450,
     lng: -117.1695850,
     title: "Room 128",
-    icon: "http://maps.google.com/mapfiles/kml/shapes/polygon.png",
+    icon: mark128,
     sub: "CS Lab",
     floor: "1",
     image: ROOM_128,
@@ -167,7 +167,7 @@ function App() {
 
         }} onMarkerClick={() => {
           setSelectedLoc(marker);
-        }} />
+        }} icon={marker.icon}/>
       )
 
     })
@@ -281,7 +281,7 @@ function App() {
           }
 
           {
-            selectedLoc.type === "other" && (
+            selectedLoc.type === "amenities" && (
               <>
                 <h3 className="heading">Reviews</h3>
                 <section className="review-option-wrapper">
