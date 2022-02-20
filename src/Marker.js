@@ -5,8 +5,18 @@ const Marker = (options) => {
 
   React.useEffect(() => {
     if (!marker) {
+      const image = 
+        new window.google.maps.MarkerImage(
+        options.icon,
+        null,
+        null,
+        null,
+        new window.google.maps.Size(40,60)
+        )
+      
+
       const marker = new window.google.maps.Marker({
-        icon: options.icon
+        icon: image
       });
       marker.addListener("click", (map) => {
         console.log("CLICK")

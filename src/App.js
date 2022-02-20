@@ -11,8 +11,48 @@ import BATHROOM from "./bathroom.jpg"
 import VENDING from "./vending.jpg";
 import EEME1 from "./EEME1grey.png";
 import EEME2 from "./EEME2grey.png";
-import Marker from "./Marker"
-import mark128 from "./markers/floor1rooms/128.png";
+import Marker from "./Marker";
+import mark_alarm from "./markers/info/alarm.png";
+import mark_elevator from "./markers/info/elevator.png";
+import mark_extinguisher from "./markers/info/extinguisher.png";
+import mark_mrestroom from "./markers/info/mrestroom.png";
+import mark_nrestroom from "./markers/info/nrestroom.png";
+import mark_vending from "./markers/info/vending.png";
+import mark_water from "./markers/info/water.png";
+import mark_wrestroom from "./markers/info/wrestroom.png";
+import mark_128 from "./markers/floor1rooms/128.png";
+import mark_102 from "./markers/floor1rooms/102.png";
+import mark_102A from "./markers/floor1rooms/102A.png";
+import mark_102C from "./markers/floor1rooms/102C.png";
+import mark_102D from "./markers/floor1rooms/102D.png";
+import mark_102E from "./markers/floor1rooms/102E.png";
+import mark_102F from "./markers/floor1rooms/102F.png";
+import mark_102G from "./markers/floor1rooms/102G.png";
+import mark_105 from "./markers/floor1rooms/105.png";
+import mark_106 from "./markers/floor1rooms/106.png";
+import mark_107 from "./markers/floor1rooms/107.png";
+import mark_120 from "./markers/floor1rooms/120.png";
+import mark_121 from "./markers/floor1rooms/121.png";
+import mark_123 from "./markers/floor1rooms/123.png";
+import mark_125 from "./markers/floor1rooms/125.png";
+import mark_127 from "./markers/floor1rooms/127.png";
+import mark_130 from "./markers/floor1rooms/130.png";
+import mark_131 from "./markers/floor1rooms/131.png";
+import mark_133 from "./markers/floor1rooms/133.png";
+import mark_135 from "./markers/floor1rooms/135.png";
+import mark_136 from "./markers/floor1rooms/136.png";
+import mark_137 from "./markers/floor1rooms/137.png";
+import mark_143 from "./markers/floor1rooms/143.png";
+import mark_145 from "./markers/floor1rooms/145.png";
+import mark_147 from "./markers/floor1rooms/147.png";
+import mark_149 from "./markers/floor1rooms/149.png";
+import mark_152 from "./markers/floor1rooms/152.png";
+import mark_153 from "./markers/floor1rooms/153.png";
+import mark_154 from "./markers/floor1rooms/154.png";
+import mark_155 from "./markers/floor1rooms/155.png";
+import mark_157 from "./markers/floor1rooms/157.png";
+import mark_159 from "./markers/floor1rooms/159.png";
+
 function Galactus(lat, lng) {
   const left = -74500 * (lat - 46.73176)
   const top = 1075000 * (lng + 117.16967);
@@ -26,14 +66,14 @@ function Galactus(lat, lng) {
 const EEME1_MAP_LOCS = [
   {
     id: 1,
-    lat: 46.7305450,
-    lng: -117.1695850,
+    lat: 46.73058,
+    lng: -117.16962,
     title: "Room 128",
-    icon: mark128,
     sub: "CS Lab",
     floor: "1",
     image: ROOM_128,
-    type: "class"
+    type: "class",
+    icon: mark_128
   },
   {
     id: 2,
@@ -42,6 +82,7 @@ const EEME1_MAP_LOCS = [
     title: "Male Bathroom",
     floor: "1",
     image: BATHROOM,
+    icon: mark_mrestroom,
     type: "amenities",
     avgScore: 4,
     reviews: [
@@ -59,6 +100,7 @@ const EEME1_MAP_LOCS = [
     title: "Vending Machine",
     floor: "1",
     image: VENDING,
+    icon: mark_vending,
     type: "amenities",
     avgScore: 4,
     reviews: [
@@ -74,6 +116,268 @@ const EEME1_MAP_LOCS = [
       }
     ]
   },
+  {
+    id: 4,
+    lat: 46.73053,
+    lng: -117.169075,
+    title: "Room 102",
+    sub: "Offices",
+    floor: "1",
+    type: "office",
+    icon: mark_102
+  },
+  {
+    id: 5,
+    lat: 46.730475,
+    lng: -117.16895,
+    title: "Room 102A",
+    sub: "Conference Room",
+    floor: "1",
+    type: "office",
+    icon: mark_102A
+  },
+  {
+    id: 6,
+    lat: 46.73048,
+    lng: -117.169025,
+    title: "Room 102C",
+    sub: "Empty Office",
+    floor: "1",
+    type: "office",
+    icon: mark_102C
+  },
+  {
+    id: 7,
+    lat: 46.7304775,
+    lng: -117.1690645,
+    title: "Room 102D",
+    sub: "Lourana Swayne",
+    floor: "1",
+    type: "office",
+    icon: mark_102D
+  },
+  {
+    id: 8,
+    lat: 46.730483,
+    lng: -117.169114,
+    title: "Room 102E",
+    sub: "Gwen Miller",
+    floor: "1",
+    type: "office",
+    icon: mark_102E
+  },
+  {
+    id: 9,
+    lat: 46.73049,
+    lng: -117.169157,
+    title: "Room 102F",
+    sub: "Partha Pande",
+    floor: "1",
+    type: "office",
+    icon: mark_102F
+  },
+  {
+    id: 10,
+    lat: 46.73050,
+    lng: -117.1692,
+    title: "Room 102G",
+    sub: "Partha Pande",
+    floor: "1",
+    type: "office",
+    icon: mark_102G
+  },
+  {
+    id: 12,
+    lat: 46.73044,
+    lng: -117.169335,
+    title: "Room 105",
+    sub: "EECS Research Lab",
+    floor: "1",
+    type: "class",
+    icon: mark_106
+  },
+  {
+    id: 13,
+    lat: 46.730445,
+    lng: -117.16941,
+    title: "Room 107",
+    sub: "3D Printing Club",
+    floor: "1",
+    type: "class",
+    icon: mark_107
+  },
+  {
+    id: 14,
+    lat: 46.730356,
+    lng: -117.16939,
+    title: "Room 152",
+    sub: "ME CAD Lab",
+    floor: "1",
+    type: "class",
+    icon: mark_152
+  },
+  {
+    id: 15,
+    lat: 46.730419,
+    lng: -117.169527,
+    title: "Room 143",
+    sub: "Charles Pezeshki",
+    floor: "1",
+    type: "office",
+    icon: mark_143
+  },
+  {
+    id: 16,
+    lat: 46.73039,
+    lng: -117.169527,
+    title: "Room 145",
+    sub: "Sinisa Mesarovic",
+    floor: "1",
+    type: "office",
+    icon: mark_145
+  },
+  {
+    id: 17,
+    lat: 46.73036,
+    lng: -117.16953,
+    title: "Room 147",
+    sub: "Dustin McLarty",
+    floor: "1",
+    type: "office",
+    icon: mark_147
+  },
+  {
+    id: 18,
+    lat: 46.73033,
+    lng: -117.16953,
+    title: "Room 149",
+    sub: "Nestor Prez-Arancibia",
+    floor: "1",
+    type: "office",
+    icon: mark_149
+  },
+  {
+    id: 19,
+    lat: 46.73026,
+    lng: -117.16954,
+    title: "Room 153",
+    sub: "Empty Office",
+    floor: "1",
+    type: "office",
+    icon: mark_153
+  },
+  {
+    id: 20,
+    lat: 46.73023,
+    lng: -117.169542,
+    title: "Room 155",
+    sub: "Lloyd Smith",
+    floor: "1",
+    type: "office",
+    icon: mark_155
+  },
+  {
+    id: 21,
+    lat: 46.73020,
+    lng: -117.169544,
+    title: "Room 157",
+    sub: "Empty Office",
+    floor: "1",
+    type: "office",
+    icon: mark_157
+  },
+  {
+    id: 22,
+    lat: 46.73017,
+    lng: -117.16955,
+    title: "Room 159",
+    sub: "Min Kyu Song",
+    floor: "1",
+    type: "office",
+    icon: mark_159
+  },
+  {
+    id: 23,
+    lat: 46.73017,
+    lng: -117.16941,
+    title: "Room 154",
+    sub: "Design Studio",
+    floor: "1",
+    type: "class",
+    icon: mark_154
+  },
+  {
+    id: 24,
+    lat: 46.730509,
+    lng: -117.169415,
+    title: "Room 106",
+    sub: "Design Studio",
+    floor: "1",
+    type: "class",
+    icon: mark_106
+  },
+  {
+    id: 25,
+    lat: 46.73053,
+    lng: -117.16962,
+    title: "Room 120",
+    sub: "CS Lab",
+    floor: "1",
+    type: "class",
+    icon: mark_120
+  },
+  {
+    id: 26,
+    lat: 46.730675,
+    lng: -117.16961,
+    title: "Room 130",
+    sub: "IGERT Lab",
+    floor: "1",
+    type: "class",
+    icon: mark_130
+  },
+  {
+    id: 27,
+    lat: 46.730785,
+    lng: -117.1696,
+    title: "Room 136",
+    sub: "AI Lab",
+    floor: "1",
+    type: "class",
+    icon: mark_136
+  },
+  {
+    id: 28,
+    lat: 46.730769,
+    lng: -117.169736,
+    title: "Room 137",
+    sub: "Jia Yu",
+    floor: "1",
+    type: "office",
+    icon: mark_137
+  },
+  {
+    id: 29,
+    lat: 46.730735,
+    lng: -117.169738,
+    title: "Room 135",
+    sub: "Zhe Dang",
+    floor: "1",
+    type: "office",
+    icon: mark_135
+  },
+  {
+    id: 30,
+    lat: 46.730708,
+    lng: -117.1697395,
+    title: "Room 133",
+    sub: "Jan Doppa",
+    floor: "1",
+    type: "office",
+    icon: mark_133
+  },
+
+
 ];
 
 const EEME2_LOC = [
@@ -167,7 +471,7 @@ function App() {
 
         }} onMarkerClick={() => {
           setSelectedLoc(marker);
-        }} icon={marker.icon}/>
+        }} icon = {marker.icon} />
       )
 
     })
@@ -281,7 +585,7 @@ function App() {
           }
 
           {
-            selectedLoc.type === "amenities" && (
+            selectedLoc.type === "other" && (
               <>
                 <h3 className="heading">Reviews</h3>
                 <section className="review-option-wrapper">
