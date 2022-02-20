@@ -53,6 +53,16 @@ import mark_155 from "./markers/floor1rooms/155.png";
 import mark_157 from "./markers/floor1rooms/157.png";
 import mark_159 from "./markers/floor1rooms/159.png";
 
+import mark_221 from "./markers/floor2rooms/221.png";
+import mark_223 from "./markers/floor2rooms/223.png";
+import mark_225 from "./markers/floor2rooms/225.png";
+import mark_227 from "./markers/floor2rooms/227.png";
+import mark_230 from "./markers/floor2rooms/230.png";
+import mark_231 from "./markers/floor2rooms/231.png";
+import mark_233 from "./markers/floor2rooms/233.png";
+import mark_235 from "./markers/floor2rooms/235.png";
+import mark_237 from "./markers/floor2rooms/237.png";
+
 function Galactus(lat, lng) {
   const left = -74500 * (lat - 46.73176)
   const top = 1075000 * (lng + 117.16967);
@@ -558,6 +568,105 @@ const EEME1_MAP_LOCS = [
 
 const EEME2_LOC = [
   {
+    id: 2,
+    lat: 46.7304500,
+    lng: -117.1695850,
+    title: "Male Bathroom",
+    sub: "(ADA)",
+    floor: "1",
+    image: BATHROOM,
+    icon: mark_mrestroom,
+    type: "amenities",
+    avgScore: 4,
+    reviews: [
+      {
+        title: "Pleasant experience! Would go again.",
+        stars: 4,
+        body: "The bathroom  was kept clean."
+      }
+    ]
+  },
+  {
+    id: 28,
+    lat: 46.730769,
+    lng: -117.169736,
+    title: "Room 237",
+    sub: "Jia Yu",
+    floor: "1",
+    type: "office",
+    icon: mark_237
+  },
+  {
+    id: 29,
+    lat: 46.730735,
+    lng: -117.169738,
+    title: "Room 235",
+    sub: "Zhe Dang",
+    floor: "1",
+    type: "office",
+    icon: mark_235
+  },
+  {
+    id: 30,
+    lat: 46.730708,
+    lng: -117.1697395,
+    title: "Room 133",
+    sub: "Jan Doppa",
+    floor: "1",
+    type: "office",
+    icon: mark_233
+  },
+  {
+    id: 31,
+    lat: 46.73068,
+    lng: -117.1697425,
+    title: "Room 231",
+    sub: "Empty Office",
+    floor: "1",
+    type: "office",
+    icon: mark_231
+  },
+  {
+    id: 32,
+    lat: 46.73061,
+    lng: -117.16975,
+    title: "Room 227",
+    sub: "Larry Holder",
+    floor: "1",
+    type: "office",
+    icon: mark_227
+  },
+  {
+    id: 33,
+    lat: 46.73058,
+    lng: -117.169755,
+    title: "Room 225",
+    sub: "Denk Heo",
+    floor: "1",
+    type: "office",
+    icon: mark_225
+  },
+  {
+    id: 34,
+    lat: 46.73055,
+    lng: -117.169757,
+    title: "Room 223",
+    sub: "Ghira Broschat",
+    floor: "1",
+    type: "office",
+    icon: mark_223
+  },
+  {
+    id: 35,
+    lat: 46.730518,
+    lng: -117.169759,
+    title: "Room 221",
+    sub: "John Schnider",
+    floor: "1",
+    type: "office",
+    icon: mark_221
+  },
+  {
     id: 36,
     lat: 46.730558,
     lng: -117.169698,
@@ -620,24 +729,6 @@ const EEME2_LOC = [
     floor: "1",
     type: "elevator",
     icon: mark_elevator
-  },
-  {
-    id: 43,
-    lat: 46.73015,
-    lng: -117.16948,
-    title: "Fire Extinguisher",
-    floor: "1",
-    type: "fire",
-    icon: mark_extinguisher
-  },
-  {
-    id: 44,
-    lat: 46.73018,
-    lng: -117.16948,
-    title: "Fire Alarm",
-    floor: "1",
-    type: "fire",
-    icon: mark_alarm
   },
   {
     id: 45,

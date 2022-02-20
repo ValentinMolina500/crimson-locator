@@ -4,6 +4,10 @@ const Marker = (options) => {
   const [marker, setMarker] = React.useState();
 
   React.useEffect(() => {
+    function onMarkerClick(map) {
+      console.log("CLICK")
+      options?.onMarkerClick();
+    }
     if (!marker) {
       // const image = {
       //   url: options.icon,
@@ -11,6 +15,8 @@ const Marker = (options) => {
       //   scaledSize: new window.google.maps.Size(22, 40),
       //   anchor: new window.google.maps.Point(0, 50)
       // }
+
+      
 
       const markerImage = new window.google.maps.MarkerImage(
         options.icon,
@@ -23,11 +29,9 @@ const Marker = (options) => {
       const marker = new window.google.maps.Marker({
         icon: markerImage
       })
-      marker.addListener("click", (map) => {
-        console.log("CLICK")
-        options?.onMarkerClick();
 
-      })
+
+      marker.addListener("click", onMarkerClick)
       setMarker(marker);
     }
 
@@ -35,6 +39,7 @@ const Marker = (options) => {
     return () => {
       if (marker) {
         marker.setMap(null);
+        marker.removeListener("click", onMarkerClick)
       }
     };
   }, [marker]);
