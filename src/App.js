@@ -763,7 +763,7 @@ function App() {
     if (currentFloorPlan === EEME1) {
       markersToUse = EEME1_MAP_LOCS;
     } else {
-      markersToUse = [];
+      markersToUse = EEME2_LOC;
     }
     return markersToUse.map((marker) => {
       return (
@@ -784,7 +784,7 @@ function App() {
     if (currentFloorPlan === EEME1) {
       markersToUse = EEME1_MAP_LOCS;
     } else {
-      markersToUse = [];
+      markersToUse = EEME2_LOC;
     }
 
     const filteredResults = markersToUse.filter((loc) => {
