@@ -25,7 +25,9 @@ function App() {
   const [imageDimensions, setImageDimensions] = useState({
     width: 0,
     height: 0,
-  })
+  });
+
+  const [style, setStyle] = useState({});
 
   const markerRef = useRef(null);
   const [markerPOS, setMarkerPOS] = useState({ top: 0, left: 0 });
@@ -51,6 +53,8 @@ function App() {
 
     console.log(style);
     console.log(currentPostion);
+
+    setStyle(style);
     if (!markerRef.current) {
       return;
     }
@@ -94,6 +98,7 @@ function App() {
       </header>
       
       <main style={{ height: "100%" }} id="mainContainer">
+        style: {JSON.stringify(style)}
         {renderImageDimensions()}
         altitude: {alt}
         <section id="mainImage">
