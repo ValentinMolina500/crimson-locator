@@ -87,6 +87,14 @@ body {
   
 }
 
+.action-container {
+  display: flex;
+  align-items: center;
+}
+
+.action-container > button {
+  height: min-content;
+}
 .input-container {
   padding: 1rem;
   position: relative;

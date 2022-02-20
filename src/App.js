@@ -9,7 +9,8 @@ import DRAWING from "./EEME1.png";
 import ROOM_128 from "./room128.jpg";
 import BATHROOM from "./bathroom.jpg"
 import VENDING from "./vending.jpg";
-
+import EEME1 from "./EEME1grey.png";
+import EEME2 from "./EEME2grey.png";
 import Marker from "./Marker"
 function Galactus(lat, lng) {
   const left = -74500 * (lat - 46.73176)
@@ -21,7 +22,7 @@ function Galactus(lat, lng) {
   }
 }
 
-const MAP_LOCS = [
+const EEME1_MAP_LOCS = [
   {
     id: 1,
     lat: 46.7305450,
@@ -72,6 +73,10 @@ const MAP_LOCS = [
   },
 ];
 
+const EEME2_LOC = [
+
+];
+
 const CLASS_OPTS = [
   {
     time: "2PM - 3PM",
@@ -102,7 +107,7 @@ function App() {
   const [map, setMap] = React.useState();
   const [style, setStyle] = useState({});
   const [selectedLoc, setSelectedLoc] = useState(null);
-
+  const [currentFloorPlan, setCurrentFloorPlan] = useState(EEME1);
   const markerRef = useRef(null);
 
   const [filter, setFilter] = useState("");
@@ -145,7 +150,13 @@ function App() {
 
 
   const renderLocs = () => {
-    return MAP_LOCS.map((marker) => {
+    let markersToUse;
+    if (currentFloorPlan === EEME1) {
+      markersToUse = EEME1_MAP_LOCS;
+    } else {
+      markersToUse = [];
+    }
+    return markersToUse.map((marker) => {
       return (
         <Marker position={{
           lat: marker.lat,
@@ -160,7 +171,14 @@ function App() {
   }
 
   const renderResults = () => {
-    const filteredResults = MAP_LOCS.filter((loc) => {
+    let markersToUse;
+    if (currentFloorPlan === EEME1) {
+      markersToUse = EEME1_MAP_LOCS;
+    } else {
+      markersToUse = [];
+    }
+
+    const filteredResults = markersToUse.filter((loc) => {
       return loc.title.toLowerCase().includes(filter.toLowerCase());
     })
 
@@ -185,6 +203,17 @@ function App() {
       </div>
     )
   }
+
+  const onToggleFloor = () => {
+    if (currentFloorPlan === EEME1) {
+    setCurrentFloorPlan(EEME2);
+
+    } else {
+      setCurrentFloorPlan(EEME1)
+    }
+
+    setSelectedLoc(null);
+  }
   return (
     <div className="App" >
       <header className="app-header">
@@ -194,14 +223,18 @@ function App() {
       <main style={{ height: "100%" }} id="mainContainer">
 
         <div style={{ height: "100%" }} >
+          <div className="action-container">
           <div className="input-container">
             <input placeholder="Search locations..." value={filter} onChange={e => setFilter(e.target.value)}/>
             {filter && renderResults()}
           </div>
+          <button onClick={onToggleFloor}>{currentFloorPlan === EEME1 ? "To Floor 2" : "To Floor 1"}</button>
+          </div>
+          
           <Wrapper apiKey={process.env.REACT_APP_API_KEY} style={{ height: "50rem" }} >
             <Map center={center} zoom={20} style={{
               height: "45rem"
-            }} map={map} setMap={setMap}>
+            }} map={map} setMap={setMap} currentFloorPlan={currentFloorPlan}>
               <Marker position={currentPostion} />
               {renderLocs()}
             </Map>
