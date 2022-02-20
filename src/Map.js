@@ -1,9 +1,9 @@
 import React from 'react';
 
 import DRAWING from "./EEME1.png";
-const Map = ({ style, center, zoom, children }) => {
+const Map = ({ style, center, zoom, children, map, setMap}) => {
   const ref = React.useRef(null);
-  const [map, setMap] = React.useState();
+
 
   React.useEffect(() => {
     if (ref.current && !map) {

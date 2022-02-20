@@ -5,7 +5,13 @@ const Marker = (options) => {
 
   React.useEffect(() => {
     if (!marker) {
-      setMarker(new window.google.maps.Marker());
+      const marker = new window.google.maps.Marker();
+      marker.addListener("click", (map) => {
+        console.log("CLICK")
+        options?.onMarkerClick();
+
+      })
+      setMarker(marker);
     }
 
     // remove marker from map on unmount
