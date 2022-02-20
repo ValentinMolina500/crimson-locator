@@ -5,19 +5,24 @@ const Marker = (options) => {
 
   React.useEffect(() => {
     if (!marker) {
-      const image = 
-        new window.google.maps.MarkerImage(
+      // const image = {
+      //   url: options.icon,
+      //   size: new window.google.maps.Size(22, 40),
+      //   scaledSize: new window.google.maps.Size(22, 40),
+      //   anchor: new window.google.maps.Point(0, 50)
+      // }
+
+      const markerImage = new window.google.maps.MarkerImage(
         options.icon,
-        null,
-        null,
-        null,
-        new window.google.maps.Size(40,60)
-        )
-      
+        null, /* size is determined at runtime */
+        null, /* origin is 0,0 */
+        null, /* anchor is bottom center of the scaled image */
+        new window.google.maps.Size(24, 24)
+      );
 
       const marker = new window.google.maps.Marker({
-        icon: image
-      });
+        icon: markerImage
+      })
       marker.addListener("click", (map) => {
         console.log("CLICK")
         options?.onMarkerClick();
