@@ -80,6 +80,7 @@ const EEME1_MAP_LOCS = [
     lat: 46.7304500,
     lng: -117.1695850,
     title: "Male Bathroom",
+    sub: "(ADA)",
     floor: "1",
     image: BATHROOM,
     icon: mark_mrestroom,
@@ -376,12 +377,313 @@ const EEME1_MAP_LOCS = [
     type: "office",
     icon: mark_133
   },
-
-
+  {
+    id: 31,
+    lat: 46.73068,
+    lng: -117.1697425,
+    title: "Room 131",
+    sub: "Empty Office",
+    floor: "1",
+    type: "office",
+    icon: mark_131
+  },
+  {
+    id: 32,
+    lat: 46.73061,
+    lng: -117.16975,
+    title: "Room 127",
+    sub: "Venera Arnaoudova",
+    floor: "1",
+    type: "office",
+    icon: mark_127
+  },
+  {
+    id: 33,
+    lat: 46.73058,
+    lng: -117.169755,
+    title: "Room 125",
+    sub: "Andy O'Fallon",
+    floor: "1",
+    type: "office",
+    icon: mark_125
+  },
+  {
+    id: 34,
+    lat: 46.73055,
+    lng: -117.169757,
+    title: "Room 123",
+    sub: "Yan Yan",
+    floor: "1",
+    type: "office",
+    icon: mark_123
+  },
+  {
+    id: 35,
+    lat: 46.730518,
+    lng: -117.169759,
+    title: "Room 121",
+    sub: "Diane Cook",
+    floor: "1",
+    type: "office",
+    icon: mark_121
+  },
+  {
+    id: 36,
+    lat: 46.730558,
+    lng: -117.169698,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 37,
+    lat: 46.73077,
+    lng: -117.169675,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 38,
+    lat: 46.730745,
+    lng: -117.169675,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 39,
+    lat: 46.730455,
+    lng: -117.16967,
+    title: "Women's Restroom",
+    floor: "1",
+    sub: "(ADA)",
+    type: "amenities",
+    icon: mark_wrestroom
+  },
+  {
+    id: 40,
+    lat: 46.73049,
+    lng: -117.169465,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 41,
+    lat: 46.73051,
+    lng: -117.169465,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 42,
+    lat: 46.73053,
+    lng: -117.169465,
+    title: "Elevator",
+    floor: "1",
+    type: "elevator",
+    icon: mark_elevator
+  },
+  {
+    id: 43,
+    lat: 46.73015,
+    lng: -117.16948,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 44,
+    lat: 46.73018,
+    lng: -117.16948,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 45,
+    lat: 46.73049,
+    lng: -117.1693,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 46,
+    lat: 46.73047,
+    lng: -117.168902,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 47,
+    lat: 46.73049,
+    lng: -117.1689,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 48,
+    lat: 46.73048,
+    lng: -117.16884,
+    title: "Elevator",
+    floor: "1",
+    type: "elevator",
+    icon: mark_elevator
+  },
+  {
+    id: 49,
+    lat: 46.73054,
+    lng: -117.16888,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
 ];
 
 const EEME2_LOC = [
-
+  {
+    id: 36,
+    lat: 46.730558,
+    lng: -117.169698,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 37,
+    lat: 46.73077,
+    lng: -117.169675,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 38,
+    lat: 46.730745,
+    lng: -117.169675,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 39,
+    lat: 46.730455,
+    lng: -117.16967,
+    title: "Women's Restroom",
+    floor: "1",
+    sub: "(ADA)",
+    type: "amenities",
+    icon: mark_wrestroom
+  },
+  {
+    id: 40,
+    lat: 46.73049,
+    lng: -117.169465,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 41,
+    lat: 46.73051,
+    lng: -117.169465,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 42,
+    lat: 46.73053,
+    lng: -117.169465,
+    title: "Elevator",
+    floor: "1",
+    type: "elevator",
+    icon: mark_elevator
+  },
+  {
+    id: 43,
+    lat: 46.73015,
+    lng: -117.16948,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 44,
+    lat: 46.73018,
+    lng: -117.16948,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 45,
+    lat: 46.73049,
+    lng: -117.1693,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 46,
+    lat: 46.73047,
+    lng: -117.168902,
+    title: "Fire Extinguisher",
+    floor: "1",
+    type: "fire",
+    icon: mark_extinguisher
+  },
+  {
+    id: 47,
+    lat: 46.73049,
+    lng: -117.1689,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
+  {
+    id: 48,
+    lat: 46.73048,
+    lng: -117.16884,
+    title: "Elevator",
+    floor: "1",
+    type: "elevator",
+    icon: mark_elevator
+  },
+  {
+    id: 49,
+    lat: 46.73054,
+    lng: -117.16888,
+    title: "Fire Alarm",
+    floor: "1",
+    type: "fire",
+    icon: mark_alarm
+  },
 ];
 
 const CLASS_OPTS = [
