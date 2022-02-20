@@ -7,7 +7,7 @@ import * as d3 from "d3";
 
 import DRAWING from "./EEME1.png";
 import { image } from 'd3';
-
+import Marker from "./Marker"
 function Galactus(lat, lng) {
   const left = -74500 * (lat - 46.73176)
   const top = 1075000 * (lng + 117.16967);
@@ -20,8 +20,12 @@ function Galactus(lat, lng) {
 
 
 function App() {
-  // const [center, setCenter] = useState({});
-  const [currentPostion, setCurrentPosition] = useState({ lat: 0, lng: 0});
+  const initialPos = {
+      lat: 46.7306848,
+  lng: -117.1693675
+  }
+  const [currentPostion, setCurrentPosition] = useState(initialPos);
+  const [center, setCenter] = useState(initialPos);
   const [imageDimensions, setImageDimensions] = useState({
     width: 0,
     height: 0,
@@ -34,16 +38,20 @@ function App() {
   useEffect(() => {
   
 
-    
-      const sufferingFromSuccess = (position) => {
-        const currentPOS = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
+      setInterval(() => {
+        const sufferingFromSuccess = (position) => {
+          const currentPOS = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          }
+          
+          console.log('CurrentPOS', currentPOS)
+          setCurrentPosition(currentPOS);
         }
-
-        setCurrentPosition(currentPOS);
-      }
-      navigator.geolocation.getCurrentPosition(sufferingFromSuccess, () => 32);
+        navigator.geolocation.getCurrentPosition(sufferingFromSuccess, () => 32);
+        
+      }, 1000)
+     
     
 
   }, []);
@@ -66,7 +74,6 @@ function App() {
 
   }, [currentPostion, markerRef])
 
-  const imageRef = useRef(null);
 
   const renderImageDimensions = () => {
 
@@ -86,12 +93,11 @@ function App() {
         {renderImageDimensions()}
 
           <Wrapper apiKey={process.env.REACT_APP_API_KEY}>
-            <Map center={currentPostion} zoom={20} />
+            <Map center={center} zoom={20}>
+              <Marker position={currentPostion}/>
+            </Map>
           </Wrapper>
-          {/* <div className="image-container">
-            <img src={DRAWING} style={{ height: "55rem", maxHeight: "100%"}} ref={imageRef} />
-            <div className="dot" ref={markerRef}></div>
-          </div> */}
+     
 
       </main>
     </div>

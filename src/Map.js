@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DRAWING from "./EEME1.png";
-const Map = ({ style, center, zoom }) => {
+const Map = ({ style, center, zoom, children }) => {
   const ref = React.useRef(null);
   const [map, setMap] = React.useState();
 
@@ -104,7 +104,17 @@ React.useEffect(() => {
   }
 }, [map, center, zoom])
 
-  return <div ref={ref} style={style} />
+  return (
+    <>
+    <div ref={ref} style={style} />
+    {
+      React.Children.map(children, (child) => {
+        return React.cloneElement(child, { map });
+      })
+    }
+  </>
+  )
+ 
 };
 
 export default Map;
