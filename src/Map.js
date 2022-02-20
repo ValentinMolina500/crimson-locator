@@ -11,9 +11,9 @@ const Map = ({ style, center, zoom }) => {
 
       const bounds = new window.google.maps.LatLngBounds
       (
-        new window.google.maps.LatLng(46.73047, -117.17300),
+        new window.google.maps.LatLng(46.73008, -117.16980),
 
-        new window.google.maps.LatLng(46.73176, -117.16970),
+        new window.google.maps.LatLng(46.73084, -117.16870),
       );
 
       let image = DRAWING;
@@ -42,7 +42,7 @@ const Map = ({ style, center, zoom }) => {
           img.style.width = "100%";
           img.style.height = "100%";
           img.style.position = "absolute";
-          img.style.transform = "rotate(92deg)"
+          img.style.transform = "rotate(94deg)"
           this.div.appendChild(img);
 
           // Add the element to the "overlayLayer" pane.
