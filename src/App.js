@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
   
 
-    setInterval(() => {
+    
       const sufferingFromSuccess = (position) => {
         const currentPOS = {
           lat: position.coords.latitude,
@@ -44,7 +44,7 @@ function App() {
         setCurrentPosition(currentPOS);
       }
       navigator.geolocation.getCurrentPosition(sufferingFromSuccess, () => 32);
-    }, 500)
+    
 
   }, []);
 
@@ -72,25 +72,9 @@ function App() {
 
     return `width: ${imageDimensions.width}, height: ${imageDimensions.height}`
   }
-  useEffect(() => {
-    if (!imageRef.current){
-      return;
-    }
+ 
 
-    const imageElem = imageRef.current;
-    const imageBBox = {
-      width: imageElem.clientWidth,
-      height: imageElem.clientHeight
-    }
 
-    
-    setImageDimensions(imageBBox)
-    
-  }, [imageRef])
-
-  let alt = navigator.geolocation.altitude;
-
-  console.log(alt);
   return (
     <div className="App">
       <header className="app-header">
@@ -100,15 +84,15 @@ function App() {
       <main style={{ height: "100%" }} id="mainContainer">
         style: {JSON.stringify(style)}
         {renderImageDimensions()}
-        altitude: {alt}
-        <section id="mainImage">
 
-          <div className="image-container">
+          <Wrapper apiKey={process.env.REACT_APP_API_KEY}>
+            <Map center={currentPostion} zoom={20} />
+          </Wrapper>
+          {/* <div className="image-container">
             <img src={DRAWING} style={{ height: "55rem", maxHeight: "100%"}} ref={imageRef} />
             <div className="dot" ref={markerRef}></div>
-          </div>
+          </div> */}
 
-        </section>
       </main>
     </div>
   );
